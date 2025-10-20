@@ -37,10 +37,13 @@
       justify-content: center;
       align-items: center;
       height: 97vh;
+      position: relative;  
     }
     .container svg {
       width: 50%;
       height: 50%;
+      position:absolute;          /* đảm bảo có position */
+      z-index:0;  
     }
 
     * {
@@ -297,9 +300,16 @@
     }
     text-click { 
       position: absolute; 
-      z-index: 2; 
+      z-index:9999;               /* ↑ trên hoa */
+      left:0; right:0;            /* canh giữa ngang */
+      top:70%;                    /* tuỳ chỉnh vị trí */
+      text-align:center;
+      pointer-events:none;
     }
 
+    <style>
+      .clover { color: #16a34a; } /* xanh lá */
+    </style>
     
     label { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; opacity: .8; }
 
@@ -717,7 +727,7 @@
     // ===== Letter typing =====
     let indexText = 0;
     let textLetter = document.querySelector(".textLetter h2");
-    const textLetterH2 = "Gửi MeiMei 🍀 aka My love!";
+    const textLetterH2 = "Gửi MeiMei <span class="clover">♣</span> aka My love!";
     let timerLetterTitle;
 
     function typeTitleStep() {
