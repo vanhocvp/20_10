@@ -295,7 +295,12 @@
       font-family: consolas, monospace;
       font-size: 9px;
     }
-    p { position: absolute; z-index: 2; }
+    text-click { 
+      position: absolute; 
+      z-index: 2; 
+    }
+
+    
     label { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; opacity: .8; }
 
     .letters { position: absolute; width: 65px; transition: 10s ease-in-out; cursor: pointer; z-index: 1000; }
@@ -382,6 +387,8 @@
       margin-top: 10px;
       font-family: "Dancing Script", cursive;
       position: initial;
+      line-height: 1.6;
+      word-break: break-word;
     }
 
     .fa-xmark {
