@@ -37,13 +37,10 @@
       justify-content: center;
       align-items: center;
       height: 97vh;
-
     }
     .container svg {
       width: 50%;
       height: 50%;
-
-
     }
 
     * {
@@ -300,8 +297,7 @@
     }
     text-click { 
       position: absolute; 
-      z-index:0;               /* ↑ trên hoa */
-      
+      z-index: 2; 
     }
 
     
@@ -405,7 +401,6 @@
       z-index: 101;
     }
 
-    .clover { color: #16a34a; } /* xanh lá */
     .show { display: block; }
 
     .heartAnimation { position: absolute; width: 200px; bottom: 0; }
@@ -722,7 +717,7 @@
     // ===== Letter typing =====
     let indexText = 0;
     let textLetter = document.querySelector(".textLetter h2");
-    const textLetterH2 = "Gửi MeiMei <span class="clover">♣</span> aka My love!";
+    const textLetterH2 = "Gửi MeiMei 🍀 aka My love!";
     let timerLetterTitle;
 
     function typeTitleStep() {
